@@ -1,5 +1,4 @@
 import { APIGatewayProxyEvent, APIGatewayProxyResult, Context } from 'aws-lambda'
-// LAYERS --> compatibleRuntimes: [lambda.Runtime.NODEJS_20_X]
 
 export async function handler(event: APIGatewayProxyEvent, context: Context): Promise<APIGatewayProxyResult> {
   const lambdaRequestId = context.awsRequestId
@@ -19,7 +18,7 @@ export async function handler(event: APIGatewayProxyEvent, context: Context): Pr
     }
   } else if (event.resource === '/products/{id}') {
     const productId = event.pathParameters!.id as string
-    console.log(`GET /products/${productId}`);
+    console.log(`GET /products/${productId}`)
     return {
       statusCode: 200,
       body: `GET /products/${productId}`

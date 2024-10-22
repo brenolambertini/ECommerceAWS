@@ -48,8 +48,8 @@ export class ECommerceApiStack extends cdk.Stack {
     // POST /products
     productsResource.addMethod('POST', productsAdminIntegration)
     // PUT /products/{id}
-    productsResource.addMethod('PUT', productsAdminIntegration)
+    productIdResouces.addMethod('PUT', productsAdminIntegration)
     // DELETE /products/{id}
-    productsResource.addMethod('DELETE', productsAdminIntegration)
+    productIdResouces.addMethod('DELETE', productsAdminIntegration)
   }
 }
